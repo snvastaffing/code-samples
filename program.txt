@@ -1,0 +1,43 @@
+from Dheeraj S. to everyone:    8:12 AM
+Version Control
+    Git & Github 
+Front End 
+    HTML 
+    CSS/BootStrap
+    JavaScript 
+    Jquery
+    React JS()
+    Next JS
+Build Tools
+    Maven (Java)
+    NPM (Front End or React Side)
+Tests 
+    Junit (Service)
+    Mockito (Conroller)
+Backend 
+    Java Core (8 vs 11)
+    Enterprise Java (JSP Servlets | MVC (Struts))
+    Spring Framework (WEB Dev & API DEV)
+    SpringBoot()
+    Microservices
+    Eureka ?
+    Swagger Documention 
+Databse 
+    SQL (MySQL- Postgres)
+    NOSQL (MongoDB)
+Hosting & Deployment
+    EC2 Instaces 
+    RDS ()
+    MongoDB (RDS)
+CI & CD pipelines 
+    virtualization -> containarization
+    Docker (Containarization)
+    (Kubernetes)orchestation 
+    Cluster     
+    make declarative pipeline 
+    Blue Green Deployment 
+JIRA ? 
+    SCRUM 
+
+
+https://github.com/snvastaffing/sample-code
