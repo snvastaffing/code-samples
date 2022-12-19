@@ -1,0 +1,7 @@
+Basic Activity 
+Make accounts on below websites 
+1 bibucket 
+2 gitlab 
+3 github 
+
+and use same way and commands to prove that if you learn github you have actually learnt everything on VCS
