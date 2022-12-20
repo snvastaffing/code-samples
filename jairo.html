@@ -12,17 +12,24 @@
 <body>
 
     <div>
-        <input type="text"  id="name">
-        <input type="text"  id="feedback">
+        <input type="text" id="name">
+        <input type="text" id="feedback">
 
         <button type="button" onclick="add()">Submit</button>
     </div>
 
     <div>
         <table border="2">
-            <tr><th colspan='4'>Interview Feedback</th></tr>
-            <tr><th>SrNO</th><th>Name</th><th>Technologies</th><th>Feedback</th></tr>
-            <tbody id="tb"></tbody>
+            <tr>
+                <th colspan='4'>Interview Feedback</th>
+            </tr>
+            <tr>
+                <th>SrNO</th>
+                <th>Name</th>
+                <th id="tech">Technologies</th>
+                <th>Feedback</th>
+            </tr>
+            <tbody id="tBody"></tbody>
         </table>
     </div>
 
@@ -30,41 +37,67 @@
 
 <script>
 
-    var Num = 0
+    var Num = 1
 
-    const tbody = document.getElementById('tb')
+
 
     function add() {
-        
-        const body = document.getElementById('tb')
-        
-        var name = document.getElementById('name').value
-        var feedback = document.getElementById('feedback').value
+
+        var tBody = document.getElementById('tBody')
+        var rows = tBody.getElementsByTagName('tr');
+
+        var technologies = document.createElement("td");
+        technologies.innerText = "Java, Hibernate, JSP, Servelets";
+
+        var name = document.getElementById('name')
+        var feedback = document.getElementById('feedback')
+
+        var slNo = document.createElement("td");
+        slNo.innerText = Num;
+
+        var row = document.createElement("tr")
+        var colName = document.createElement("td")
+        var colfeedback = document.createElement("td")
+
+        colName.innerText = name.value;
+        colfeedback.innerText = feedback.value;
+
+
+        row.append(slNo);
+        row.append(colName);
+
+        if (rows.length >= 1) {
+            var selectedRow = rows[0];
+            var selectedCol = selectedRow.getElementsByTagName('td')[2];
+            selectedCol.setAttribute("rowSpan", (rows.length + 1))
+        }
+        else {
+            row.append(technologies);
+        }
+        row.append(colfeedback);
+        tBody.append(row)
+
+        console.log(slNo)
+        console.log(colName)
+        console.log(technologies)
+        console.log(colfeedback)
 
         Num++
 
-        /*const row = document.createElement('tr')
-        var tdatan = document.createElement('td')
-        tdatan.append(name)
-        var tdataf
-        tdataf.append(feedback)
-        row.append(Num)
-        row.append(tdatan)
-        row.append('tec')
-        row.append(tdataf)*/
 
-        tbody.innerHTML += `
+
+        /*tbody.innerHTML += `
          <tr>
             <td>${Num}</td>
             <td>${name}</td>
             <td>tech</td>
             <td>${feedback}</td>
          </tr>
-        `
+        `*/
 
 
     }
-    
+
 
 
 
