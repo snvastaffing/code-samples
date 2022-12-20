@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <base href="https://raw.githubusercontent.com">
+</head>
+
+<body>
+    <h1>I am hero also a developer</h1>
+
+    <div>
+        <div> Name : <input type="text" id="name"> </div>
+        <div>Feedback :<input type="text" id="feedback"> </div>
+        <div><input type="button" value="Save" id="save" onclick="saveToTable()"> </div>
+    </div>
+
+    <table border="2">
+        <caption> The Student Data </caption>
+        <thead>
+            <td> Sr No </td>
+            <td> Name </td>
+            <td id="tech"> Technologies </td>
+            <td> feedback </td>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <script>
+
+        function saveToTable() {
+            var tBody = document.getElementById("tbody");
+            var rows= tBody.getElementsByTagName('tr');
+
+            var technologies = document.createElement("td");
+            technologies.innerText="Java, Hibernate, JSP, Servelets";
+            var name = document.getElementById("name");
+            var feedback = document.getElementById("feedback");
+            // alert("Yes it is working"+ name.value + "Age "+ age.value);
+         
+            var slNo = document.createElement("td");
+            
+            slNo.innerText = 1;
+            var row = document.createElement("tr")
+            var colName = document.createElement("td")
+            colName.innerText = name.value;
+            var colfeedback = document.createElement("td")
+            colfeedback.innerText = feedback.value;
+            row.append(slNo);
+            row.append(colName);
+            row.append(colName);
+              
+            if(rows.length >= 1){
+                var selectedRow = rows[0];
+                var selectedCol= selectedRow.getElementsByTagName('td')[2];
+                selectedCol.setAttribute("rowSpan",(rows.length+1))
+                //selectedRow.rowSpan=rows.length;
+                //alert("these are morethan one ");
+                //row.append(technologies);   
+            }
+            else{
+                row.append(technologies);          
+            }
+            row.append(colfeedback);   
+            tBody.append(row)
+
+           
+
+
+        }
+    </script>
+</body>
+
+</html>
