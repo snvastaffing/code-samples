@@ -1,17 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <h1>ACTIVITY</h1>
 </head>
+
 <body>
-    <h1> Hello Man, </h1>
 
+    <div>
+        <input type="text"  id="name">
+        <input type="text"  id="feedback">
 
-    <h2>Jairo html</h2>
-    
+        <button type="button" onclick="add()">Submit</button>
+    </div>
+
+    <div>
+        <table border="2">
+            <tr><th colspan='4'>Interview Feedback</th></tr>
+            <tr><th>SrNO</th><th>Name</th><th>Technologies</th><th>Feedback</th></tr>
+            <tbody id="tb"></tbody>
+        </table>
+    </div>
 
 </body>
+
+<script>
+
+    var Num = 0
+
+    const tbody = document.getElementById('tb')
+
+    function add() {
+        const body = document.getElementById('tb')
+        var name = document.getElementById('name').value
+        var feedback = document.getElementById('feedback').value
+
+        
+
+        Num++
+
+        /*const row = document.createElement('tr')
+        var tdatan = document.createElement('td')
+        tdatan.append(name)
+        var tdataf
+        tdataf.append(feedback)
+        row.append(Num)
+        row.append(tdatan)
+        row.append('tec')
+        row.append(tdataf)*/
+
+        tbody.innerHTML += `
+         <tr>
+            <td>${Num}</td>
+            <td>${name}</td>
+            <td>tech</td>
+            <td>${feedback}</td>
+         </tr>
+        `
+
+
+    }
+    
+
+
+
+
+</script>
+
 </html>
