@@ -56,7 +56,7 @@
                         redirect: 'follow'
                     };
                         let tbody= document.getElementById("tbody");
-                    fetch("http://127.0.0.1:8080/api/viewAllFiles", requestOptions)
+                    fetch("http://localhost:8080/api/viewAllFiles", requestOptions)
                         .then(response => response.json())
                         .then(result => {
 
