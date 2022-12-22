@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+
+        <input type="file" name="resumeUpload" id="uploader">
+        <input type="submit" value="Upload" name="btnUpload" id="btnUpload" onclick="uploadFile()">
+    </section>
+
+    <section>
+        <caption>All Uploaded Files</caption>
+        <table>
+            <thead>
+                <td>Sr No</td>
+                <td>File Name </td>
+                <td>Server Path</td>
+                <td>Download</td>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <script>
+        function uploadFile() {
+
+            var inputFile = document.getElementById("uploader");
+            console.log(inputFile);
+            var formdata = new FormData();
+            formdata.append("file", inputFile.files[0]);
+
+            var requestOptions = {
+                method: 'POST',
+                body: formdata,
+                redirect: 'follow'
+            };
+
+            fetch("http://localhost:8080/api/uploadfile", requestOptions)
+                .then(response => response.text())
+                .then(result => {
+                    alert("The Operation ")
+                    alert(result)
+                    var requestOptions = {
+                        method: 'GET',
+                        redirect: 'follow'
+                    };
+                        let tbody= document.getElementById("tbody");
+                    fetch("http://127.0.0.1:8080/api/viewAllFiles", requestOptions)
+                        .then(response => response.json())
+                        .then(result => {
+
+                            console.log("The Rsult "+ result)
+
+                            for (let  i=0; i < result.length; i++){
+                                let splitLine = result[i].split('|')
+                                let row = document.createElement("tr");
+                                let srNo = document.createElement("td");
+                                srNo.innerText=(i+1)
+                                let fileName = document.createElement("td");
+                                fileName.innerText= splitLine[0]//result[i]
+                                let serverPath = document.createElement("td");
+                                serverPath.innerText= splitLine[1]
+                                let download = document.createElement("td");
+                                download.innerHTML= document.createElement("a").text= splitLine[0];
+
+                                row.append(srNo)
+                                row.append(fileName)
+                                row.append(serverPath)
+                                row.append(download)
+                                tbody.append(row)
+                            }
+                        })
+                        .catch(error => console.log('error', error));
+                }
+                )
+                .catch(error => console.log('error', error));
+        }
+    </script>
+</body>
+
+</html>
