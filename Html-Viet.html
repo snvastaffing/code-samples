@@ -7,22 +7,80 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <caption> Interview FeedBack</caption>
-        <table border="2">
-            <thead><td>SNo</td><td>Name</td><td>Technologie</td><td>FeedBack</td></thead>
+    <div> 
+        <table>
             <tbody>
-                <tr><td>1</td><td>Name1</td><td rowspan="8">Java, SpringBoot, JPA, MongoDB</td><td>pass</td></tr>
+                <tr><td>sN :</td> <td><input type = "text"> </td></tr>
+                <tr><td>Name :</td> <td><input type = "text" id="name"> </td></tr>
+                <tr><td>FeedBack :</td> <td><input type = "text" id="feedback"> </td></tr>
+                <tr><td></td> <td><input type = "button" value ="Save" id="save" onclick="addTable()"> </td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <table border="2">
+            <caption> Interview FeedBack</caption>
+            <thead><td>SNo</td><td>Name</td><td>Technologie</td><td>FeedBack</td></thead>
+            <tbody id="tb">
+  <!--              <tr><td>1</td><td>Name1</td><td rowspan="8">Java, SpringBoot, JPA, MongoDB</td><td>pass</td></tr>
                 <tr><td>2</td><td>Name2</td><td>fail</td></tr>
                 <tr><td>3</td><td>Name3</td><td>pass</td></tr>
                 <tr><td>4</td><td>Name4</td><td>pass</td></tr>
                 <tr><td>5</td><td>Name5</td><td>pass</td></tr>
                 <tr><td>6</td><td>Name6</td><td>pass</td></tr>
                 <tr><td>7</td><td>Name7</td><td>fail</td></tr>
-                <tr><td>8</td><td>Name8</td><td>fail</td></tr>
+                <tr><td>8</td><td>Name8</td><td>fail</td></tr>  -->
             </tbody>
         </table>
     </div>
+    <script>
 
+        function addTable() {
+
+            var name = document.getElementById("name");
+            var feedback = document.getElementById("feedback");
+            alert("In function"+ name +" " + feedback);
+
+            var tBody = document.getElementById("tb");
+            //var rows= tBody.getElementsByTagName('tr');
+
+            var row = document.createElement("tr")
+
+            var slNo = document.createElement("td");
+            slNo.innerText = 1;
+
+            var colName = document.createElement("td")
+            colName.innerText = name.value;
+
+            var technologies = document.createElement("td");
+            technologies.innerText="Java, Hibernate, JSP, Servelets";
+            // alert("Yes it is working"+ name.value + "Age "+ age.value);
+         
+            var colfeedback = document.createElement("td")
+            colfeedback.innerText = feedback.value;
+            row.append(slNo);
+            row.append(colName);
+            row.append(colName);
+              
+            if(rows.length >= 1){
+                var selectedRow = rows[0];
+                var selectedCol= selectedRow.getElementsByTagName('td')[2];
+                selectedCol.setAttribute("rowSpan",(rows.length+1))
+                //selectedRow.rowSpan=rows.length;
+                //alert("these are morethan one ");
+                //row.append(technologies);   
+            }
+            else{
+                row.append(technologies);          
+            }
+            row.append(colfeedback);   
+            tBody.append(row)
+
+           
+
+
+        }
+    </script>
 </body>
 </html>
