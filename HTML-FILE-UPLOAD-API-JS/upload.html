@@ -9,6 +9,28 @@
 </head>
 
 <body>
+    <select name= "resumeOrigins" multiple>
+        <option value = "India" title = "India">Indian Resumes</option>
+        <option value = "USA" title = "USA">USA Resumes</option>
+        <option value = "Russia" title = "Russia">Russian Resumes</option>
+    </select>
+    <br>
+    <div>
+        <label>Private</label>
+        <input type="radio" id="private" value = "private" name="privacy" onclick="radiohandle()">
+        <label>Public</label>
+        <input type="radio" id="public" value = "public" name="privacy" onclick="radiohandle()">
+    </div>
+
+    <input type="text" value="" placeholder="this should not be blank" required>
+    <input type="text" value="" placeholder="this should not be blank" required>
+    <input type="text" value="" placeholder="this should not be blank" required>
+    <input type="text" value="" placeholder="this should not be blank" required autofocus>
+    <form> 
+        <br>
+        <label title="PIN NUMBER"> Search Your Country </label>
+        <input id="mysearch" type="search">
+    </form>
     <section>
 
         <input type="file" name="resumeUpload" id="uploader">
@@ -17,7 +39,7 @@
 
     <section>
         <caption>All Uploaded Files</caption>
-        <table>
+        <table border="2">
             <thead>
                 <td>Sr No</td>
                 <td>File Name </td>
@@ -33,6 +55,17 @@
     </section>
 
     <script>
+
+        function radiohandle() {
+            if(document.getElementByID("private").checked) {
+                alert("private checked")
+                document.getElementByID("private").checked = false
+            } else {
+                alert("public checked")
+                document.getElementByID("public").checked = false
+            }
+        }
+
         function uploadFile() {
 
             var inputFile = document.getElementById("uploader");
