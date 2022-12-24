@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style\assign1.css" rel="stylesheet" type="text/css">
+    
+    
+</head>
+<body>
+    <div id = "contact" class="block1">
+        <div class="CTitle"  >  Contact Information 
+        </div>
+        <div id ="bodyContact">
+           <!-- <form action='/' method='POST' onsubmit='disableButton()'> -->           
+                <section>
+                    <input type ="email" required placeholder="Enter Your E-mail" id = "emailInput" >
+                    <select>
+                        <option>+1</option>
+                        <option>+33</option>
+                        <option>+475</option>
+                    </select>
+                    <input type ="tel" required placeholder="Enter Your Pnone No" id = "phone" onchange="enableform()">
+                </section>
+                <br>
+                <section>
+                    <input type ="button" value = "CONTINUE DETAILS" id = "submit" onclick="displayDetail()" disabled >
+                </section>
+           
+        </div>
+    </div>
+    <div id="travelers1" class="blockDetail">  
+        <div class="CTitle"> 
+            Traveler Details 
+        </div>
+        <div id= "bodyDetail"> 
+            <table id="EmailTable">
+                <tr>
+                    <td id="emailTraveler1"><b> Email </b>: ngtviet2@gmail.com</td> 
+                    <td id="phoneTraveler1"><b> Phone No </b>: 6692859715 </td>
+                </tr>
+            </table>
+            <br>
+            <!-- </div>
+          <div> 
+            
+            <div>
+                <b>Adult 1 </b><br>
+            </div>  -->
+            <div> 
+                <b>Adult 1 </b>
+            
+                <table id="EmailTable"> 
+                    <tbody>
+                        <tr><td><b>Name </b>: </td><td><b>DOB </b>:</td><td><b>Gender </b>: </td></tr>
+                    </tbody>
+                </table>
+            </div>
+           <!--   </div>
+           <div> -->
+            <br><br>
+            <b>Adult 1</b><br>
+            <table id="DetailTable">
+                <tbody>
+                    <tr> <td class="paddingL">Title</td> <td>First name</td> <td>Middle Name</td>  <td>Last Name</td> 
+                    </tr>
+                    <tr> 
+                        <td class="paddingL">
+                            <select id="SelTitle">
+                                <option value=0>Mr.</option>
+                                <option  value=1>Ms.</option>
+                                <option  value=2>Mss.</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" placeholder ="Enter First Name" id="fn">
+                        </td>
+                        <td>
+                            <input type="text" placeholder ="Enter Middle Name" id="mn">
+                        </td>
+                        <td>
+                            <input type="text" placeholder ="Enter Last Name" id="ln">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="paddingL">Date of Birth</td>
+                        <td>Gender</td>
+                        <td></td>
+                        <td> </td>
+                    </tr>';
+                    <tr>
+                        <td class="paddingL"><input type="date" id="date1">
+                        </td>
+                        <td>
+                            <select id="SelGender">
+                                <option value=0>Male</option>
+                                <option value=1>Female</option>
+                                <option value=2>Others</option>
+                            </select>
+                        </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--</div>
+            <div>  -->
+                <br>
+             <input type ="button" value = "CONTINUE DETAILS" id = "submit2" onclick="displayDetail2()" >
+        </div>
+    </div>
+    <div id="travelers2" class="blockDetail">  
+        <div class="CTitle"> 
+            Traveler2 Details 
+        </div>
+        <div id= "bodyDetail"> 
+            <table id="EmailTable">
+                <tr>
+                    <td id="emailTraveler2"><b> Email </b>: ngtviet2@gmail.com</td> 
+                    <td id="phoneTraveler2"><b> Phone No </b>: 6692859715 </td>
+                </tr>
+            </table>
+            <br>
+            <!-- </div>
+          <div> 
+            
+            <div>
+                <b>Adult 1 </b><br>
+            </div>  -->
+            <div> 
+                <b>Adult 1 </b>
+            
+                <table id="EmailTable"> 
+                    <tbody>
+                        <tr><td id="name2"><b>Name </b>: Viet </td><td id="dob2"><b>DOB </b>: 10/15/1969</td><td id="gender2"><b>Gender </b>: Male</td></tr>
+                    </tbody>
+                </table>
+            </div>
+           <!--   </div>
+           <div> -->
+            <br><br>
+            <b>Adult 1</b><br>
+            <table id="DetailTable">
+                <tbody>
+                    <tr> <td class="paddingL">Title</td> <td>First name</td> <td>Middle Name</td>  <td>Last Name</td> 
+                    </tr>
+                    <tr> 
+                        <td class="paddingL">
+                            <select id="SelTitle2">
+                                <option value=0>Mr.</option>
+                                <option value=1>Ms.</option>
+                                <option value=2>Mss.</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" placeholder ="Enter First Name" id="fn2">
+                        </td>
+                        <td>
+                            <input type="text" placeholder ="Enter Middle Name" id="mn2">
+                        </td>
+                        <td>
+                            <input type="text" placeholder ="Enter Last Name" id="ln2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="paddingL">Date of Birth</td>
+                        <td>Gender</td>
+                        <td></td>
+                        <td> </td>
+                    </tr>';
+                    <tr>
+                        <td class="paddingL"><input type="date" id="date2">
+                        </td>
+                        <td>
+                            <select id="SelGender2">
+                                <option value=1>Male</option>
+                                <option value=2>Female</option>
+                                <option value=3>Others</option>
+                            </select>
+                        </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--</div>
+            <div>  -->
+                <br>
+             <input type ="button" value = "CONTINUE DETAILS" id = "submit2" onclick="displayDetail3()" >
+        </div>
+    </div>    
+    <div id="Passenger" class="blockDetail">  
+        <div class="CTitle"> 
+            Passager Details 
+        </div>
+        <div id= "bodyDetail"> 
+            <table id="DetailTable">
+                <tbody>
+                    <thead class="headerT"> <td class="paddingL">Title</td> <td>First name</td> <td>Middle Name</td><td>Last Name</td><td>DOB</td><td>Gender</td> 
+                    </thead>
+                    <tr> 
+                        <td class="paddingL" id="Ptitle">Mr</td><td id="Pfn">Viet</td><td id="Pmn">Trac</td><td id="Pln">Nguyen</td><td id="Pdob">09/09/2009</td><td id="Pgender">Male</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--</div>
+            <div>  -->
+                <br><br>
+                <!-- </div>
+              <div> 
+                
+                <div>
+                    <b>Adult 1 </b><br>
+                </div>  -->
+                <div> 
+                    <b>Price Details </b>
+                    <br><br>
+                    <table id="DetailTable"> 
+                        <tbody>
+                            <tr><td class = paddingL><b>1 Traveler : Per Adult</b></td> <td class = paddingR>USD 347.98</b></td></tr>
+                            <tr><td class = paddingL>Flight Charges per adult</td> <td class = paddingR>USD 86.00</td></tr>
+                            <tr><td class = paddingL>Taxes and Fees per adult</td> <td class = paddingR>USD 261.98</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+
+    <script>
+// Enable submit button
+        function enableform() {
+            //alert("enable button");
+            var btn = document.getElementById("submit");
+            //alert(btn.value);
+            btn.disabled=false;
+        }
+
+// Detail form with display
+        var email;
+        var pN ;
+        var fn,mn,ln;
+        var valueSelTitle,valueSelGender;
+        var TextTitle,TextGender;
+        var dateInput;
+        function displayDetail(){
+            //alert("In my Detail");
+            email = document.getElementById("emailInput").value;
+            //alert("In my Detail :" + email);
+            pN = document.getElementById("phone").value;
+            //alert("In my Detail :" + email +" "+ pN);
+            document.getElementById("emailTraveler1").innerHtml = "<b>" +'Email :'+"</b>"+ email;
+            document.getElementById("phoneTraveler1").innerHtml = '<b>Phone No :</b>'+ pN;
+            document.getElementById("travelers1").setAttribute("style","display:inline");
+            document.getElementById("contact").setAttribute("style","display:none");
+        }
+
+        
+        // Display details 2
+        function displayDetail2(){
+            //alert("In my Detail");
+            //var email = document.getElementById("emailInput").value;
+            //alert("In my Detail :" + email);
+            //var pN = document.getElementById("phone").value;
+            //alert("In my Detail :" + email +" "+ pN);
+            document.getElementById("emailTraveler2").innerHtml = "<b>" +'Email :'+"</b>"+ email;
+            document.getElementById("phoneTraveler2").innerHtml = '<b>Phone No :</b>'+ pN;
+            fn=document.getElementById("fn").value;
+            mn=document.getElementById("mn").value;
+            ln=document.getElementById("ln").value;
+            var e = document.getElementById("SelTitle");
+            valueSelTitle = e.value
+            TextTitle = e.options[e.selectedIndex].text;
+            //alert(e.selectedIndex +' '+ valueSelTitle +' '+ TextTitle)
+
+            e = document.getElementById("SelGender");
+            valueSelGender = e.value;
+            TextGender = e.options[e.selectedIndex].text;
+            e= document.getElementById("date1");
+            alert(e.value);
+            dateInput=e.value;
+
+            document.getElementById("fn2").value = fn;
+            document.getElementById("mn2").value = mn;
+            document.getElementById("ln2").value = ln;
+            document.getElementById("name2").innerHTML = '<b>Name</b> :'+fn+' '+mn+' '+ln;
+            document.getElementById("gender2").innerHTML = '<b>Gender </b>: ' + TextGender;
+            var e2 = document.getElementById("SelTitle2");
+            //alert(valueSelTitle);
+            e2.selectedIndex = valueSelTitle;
+            e2 = document.getElementById("SelGender2");
+            //alert(valueSelTitle);
+            e2.selectedIndex = valueSelGender;
+            //e.options[valueSelTitle]=selectedIndex;
+            e2= document.getElementById("date2");
+            e2.value=dateInput ;
+            document.getElementById("travelers1").setAttribute("style","display:none");
+            document.getElementById("travelers2").setAttribute("style","display:inline");
+            //alert(valueSelTitle);
+           
+        }
+
+        // Display Paasenger Details
+        function displayDetail3(){
+            document.getElementById("Ptitle").innerHTML = TextTitle;
+            document.getElementById("Pgender").innerHTML = TextGender;
+            document.getElementById("Pdob").innerHTML = dateInput;
+            document.getElementById("Pfn").innerHTML = fn;
+            document.getElementById("Pmn").innerHTML = mn;
+            document.getElementById("Pln").innerHTML = ln;
+            document.getElementById("travelers2").setAttribute("style","display:none");
+            document.getElementById("Passenger").setAttribute("style","display:inline");
+            //alert(valueSelTitle);
+           
+        }
+    </script>
+</body>
+</html>
