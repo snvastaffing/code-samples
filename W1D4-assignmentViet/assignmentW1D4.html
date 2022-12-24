@@ -260,10 +260,6 @@
         // Display details 2
         function displayDetail2(){
             //alert("In my Detail");
-            //var email = document.getElementById("emailInput").value;
-            //alert("In my Detail :" + email);
-            //var pN = document.getElementById("phone").value;
-            //alert("In my Detail :" + email +" "+ pN);
             document.getElementById("emailTraveler2").innerHtml = "<b>" +'Email :'+"</b>"+ email;
             document.getElementById("phoneTraveler2").innerHtml = '<b>Phone No :</b>'+ pN;
             fn=document.getElementById("fn").value;
@@ -278,7 +274,7 @@
             valueSelGender = e.value;
             TextGender = e.options[e.selectedIndex].text;
             e= document.getElementById("date1");
-            alert(e.value);
+            //alert(e.value);
             dateInput=e.value;
 
             document.getElementById("fn2").value = fn;
