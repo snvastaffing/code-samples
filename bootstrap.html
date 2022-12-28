@@ -12,6 +12,16 @@
                 background-color: black;
                 color: white;
                 margin-top: 10px;
+                text-align: center;
+                padding: 20px;
+            }
+        }
+        @media only screen and (min-width:575px) {
+            .lg-bg-light{
+                background-color: blue;
+                color: white;
+                text-align: center;
+                padding: 20px;
             }
         }
     </style>
@@ -21,9 +31,9 @@
 <body>
 
     <div class="p-2 m-2 row">
-        <div class="p-2 col-sm-4 sm-bg-dark border">Grid item 1</div>
-        <div class="p-2 col-sm-4 sm-bg-dark border">Grid item 2</div>
-        <div class="p-2 col-sm-4 sm-bg-dark border">Grid item 3</div>
+        <div class="col-sm-4 sm-bg-dark lg-bg-light border">Grid item 1</div>
+        <div class="col-sm-4 sm-bg-dark lg-bg-light border">Grid item 2</div>
+        <div class="col-sm-4 sm-bg-dark lg-bg-light border">Grid item 3</div>
       </div>
     
 </body>
