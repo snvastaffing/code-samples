@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        @media only screen and (max-width:600px){
+            .sm-bg-dark{
+                background-color: black;
+                color: white;
+                padding: 2px;
+            }
+        }
+        @media only screen and (max-width:900px){
+            .lg-bg-dark{
+                background-color: white;
+                color: black;
+                padding: 2px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <div class="gap-3 gap-md-0 row lg-bg-dark">
+        <div class="mt-2 sm-bg-dark border col-md-4">Grid item 1</div>
+        <div class="mt-md-2 sm-bg-dark border col-md-4">Grid item 2</div>
+        <div class="mt-md-2 sm-bg-dark border col-md-4">Grid item 3</div>
+      </div>
+    
+    <h1> Flex Example</h1>
+    <!-- <script>
+        function toggle(){
+            var tgElements = document.getElementsByClassName("tg1");
+            for(let i = 0; i<=tgElements.length ;i++){
+                if(tgElements[i].classList.contains('invisible')){
+                    gElements[i].classList.remove('invisible');
+                }
+            }
+        }
+    </script> -->
+    <div class="d-flex flex-row">
+        <div class="bg-primary tg1">Flex 1</div>
+        <div class="bg-secondary tg1">Flex 2</div>
+        <div class="bg-warning tg1">Flex 3</div>
+        <div class="bg-error"><button data-bs-target="#coll" data-bs-toggle="collapse">Show/Hide</button>Toggle</div>
+
+    </div>
+    <div class="container-fluid">
+        <h1>Z-Indexed</h1>
+        <div class="z-index-n1 bg-dark text-light position-absolute">zIndex n1</div>
+        <div class="z-index-n1 bg-primary position-absolute">zIndex 1</div>
+        <div class="z-index-n1 bg-secondary position-absolute">zIndex 2</div>
+    </div>
+  </body>
+</html>
