@@ -1,0 +1,58 @@
+
+/* All of these could be applied to the 
+1. Embedded 
+2. External 
+3. need to see the inline ones as there is no scope for using the below 3 i.e class or ID or universalz
+*/
+
+
+/* Universal Selector */
+*{
+    background-color: rgb(253, 224, 169);
+}
+/* Element Selector */
+p{
+    background-color: pink;
+}
+
+/* Class Selector */
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.consolas{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.myfont{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* ID Selector */
+
+#myFavorateElement{
+    background-color: rgb(253, 85, 169,.5);
+}
+
+
+legend[blabla="haha"]{
+    background-color: cornsilk;
+}
+legend[myelement="false"]{
+    background-color: rebeccapurple;
+}
+legend[name="somename"]
+{
+    background-color: red; 
+}
+
+a:link{
+    color: darkcyan;
+}
+a:visited{
+    color: burlywood;
+}
+a:hover{
+    color: green;
+}
+

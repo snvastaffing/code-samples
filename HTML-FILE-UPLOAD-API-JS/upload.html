@@ -11,11 +11,49 @@
 <body>
     <section>
 
+        <input type="hidden" id="dheeraj" value="good guy">
+
+
+        <select name="resumeOrigins"  size="5" multiple>
+            <option value="India" title="India">Indian Resumes</option>
+            <option value="USA" title="USA">USA Resumes</option>
+            <option value="Russia" title="Russia">Russia Resumes</option>
+        </select>
+
+        <div>
+            <label>Public</label> <input type="radio" name="Public" value="public" >
+            <label>Private</label> <input type="radio" name="Private" value="private" >
+        </div>
+
+
+        <input type="text" value="" placeholder="this should not be left blank" required >
+        <input type="text" value="" placeholder="this should not be left blank" required >
+        <input type="text" value="" placeholder="this should not be left blank" required >
+        <input type="text" value="" placeholder="this should not be left blank" required autofocus>
+         <form>
+            <br>
+            <label title="PIN NUMER">Search Your Country</label>
+            <input type="text" placeholder="PIN NUMBER" list="countryList">
+
+            <label id="rangeValue"> The Data  </label> <input type="range" name="range" id="range" onchange="handleRange(this)">
+
+
+            <datalist id="countryList"
+            >
+                <option>USA</option>
+                <option>UAE</option>
+                <option>aaaa</option>
+                <option>bbbb</option>
+            </datalist>
+            <br>
+            <input type="submit">
+         </form>
         <input type="file" name="resumeUpload" id="uploader">
         <input type="submit" value="Upload" name="btnUpload" id="btnUpload" onclick="uploadFile()">
     </section>
 
-    <section>
+    <div style="align-content: center;">
+    <section  style="width:50%">
         <caption>All Uploaded Files</caption>
         <table>
             <thead>
@@ -31,8 +69,22 @@
         </table>
 
     </section>
+</div>
+
+    <section>
+        <label for="meeting1" >Please select the date of meeting </label>
+
+        <input type="date" id="meeting">
+        <input type="datetime" id="meeting1">
+    </section>
 
     <script>
+
+   function handleRange(e){
+    document.getElementById('rangeValue').innerText= e.value;
+   }
+
+
         function uploadFile() {
 
             var inputFile = document.getElementById("uploader");
