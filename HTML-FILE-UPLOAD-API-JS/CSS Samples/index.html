@@ -1,0 +1,95 @@
+
+D:\Bootcamp-Labs\inclass-demos\code-samples<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link href="style/index.css" rel="stylesheet" type="text/css" />
+
+  
+</head>
+<body>
+<h1 id="myFavorateElement">Contact Contoso Conferencing</h1>
+<p>Contoso Conferencing Ltd.</p>
+<p>123 South Street<br />
+Somewhere<br />
+Over There<br />
+<em>USA</em></p>
+
+
+<div
+ style="height: 200px; width:200px; border: 20px solid; border-radius: 100px;">
+    
+</div>
+
+
+
+<p style="background-color: red";>
+<a href="mailto:contact@contoso.com">contact@contoso.com</a>
+<a href="https://github.com/snvastaffing/">MyGitProfile</a>
+</p>
+<p>
+If you would like to contact Contoso Conferencing, whether you're interested in our services or in a conference we're currently organizing, don't hesitate to contact us using our enquiry form (<strong>Bold fields</strong> are required).
+</p>
+<form method="POST" action="support.aspx">
+  <fieldset>
+    <legend blabla="haha" 
+    myelement="false" 
+    name="somename" 
+    height="200px" >
+      Your Details and Enquiry
+    </legend>
+    <ol>
+      <li>
+        <label class="myfont">
+          <strong>Full name</strong><br />
+          <input type="text" 
+                 name="UserName" />
+        </label>
+      </li>
+      <li>
+        <label class="arial">
+          Telephone number<br />
+          <input type="text" 
+                 name="Phone" />
+        </label>
+      </li>
+      <li>
+        <label class="consolas">
+          Email Address<br />
+          <input type="text" 
+                 name="Email" />
+        </label>
+      </li>
+      <li>
+        <label>
+          <strong>Message</strong><br />
+          <textarea name="Message" 
+            cols="30" rows="10">Add your message here
+          </textarea>
+        </label>
+      </li>
+    </ol>
+  </fieldset>
+
+
+  <div>
+    <table>
+        <tr>
+            <td><label>Full name</label></td> 
+            <td><label>Contact Number</label></td> 
+            <td><label>Email Address</label></td> 
+            <td><label>Message</label></td> </tr>
+        <tr>  
+            <td><input type="text" name="UserName" /></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+    </table>
+  </div>
+
+  <input type="submit" value="Send" />
+</form>
+</body>
+</html>
