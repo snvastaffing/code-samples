@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+</head>
+<body>
+    <fieldset>
+        <legend>
+            Your Details and Enquiry
+        </legend>
+        <div>
+            <form method="get" action="./Enquiry.html" enctype="application/x-www-form-urlencoded" autocomplete="off" target="myiframe">
+                <button button="Submit">Submit</button>
+            </form>
+        </div>
+        <div>
+            <form method="get" action="./Enquiry.html" enctype="application/x-www-form-urlencoded" autocomplete="off" target="_blank"">
+                <ol>
+                   <li>
+                        <label>
+                            <strong>Name</strong><br>
+                            <input type="text" name="username">
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <strong>Telephone</strong><br>
+                            <input type="tel" name="telephone">
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <strong>Email</strong><br>
+                            <input type="email" name="email">
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <strong>Message</strong><br>
+                            <textarea type="text" col="20" rows="10" name="message"></textarea>
+                        </label>
+                    </li>
+                </ol>
+                <button button="Submit">Submit</button>
+            </form>
+        </div>
+    </fieldset>
+    <iframe name="myiframe"></iframe>
+</body>
+</html>

@@ -4,40 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
     <title>Home page</title>
 </head>
 <body>
+    <div class="container-fluid">
+        <div class="form-floating mb-3 col-3">
+            <input type="name" class="form-control" id="name" placeholder="name">
+            <label for="addPerson">Name</label>
+        </div>
+        <div class="form-floating mb-3 col-3">
+            <input type="text" class="form-control" id="feedback" placeholder="feedback">
+            <label for="addPerson" class="form-label">Feedback</label>
+        </div>
+        <div class="d-md-flex">
+            <button class="btn btn-primary" type="button" id="save" onclick="saveToTable()">Save</button>
+        </div>
+    </div>
 
-    <!-- <div>
-        <div>Name : <input type="text", id="name"></div>
-        <div>Feedback: <input type="text", id="feedback"></div>
-        <div></div>
-    </div> -->
-
-    <table border="1px">
-        <caption>Interview Feedback</caption>
-        <th>SrNo</th><th>Name</th><th>Technologies</th><th>Feedback</th>
-        <tr>
-            <td>1</td><td>name1</td><td rowspan="8" align="center">Java,<br> Springboot,<br> JAP, MongoBD</td><td>pass</td>
-        </tr>
-        <tr>
-            <td>2</td><td>name2</td><td>fail</td>
-        </tr>
-        <tr>
-            <td>3</td><td>name3</td><td>pass</td>
-        </tr>
-        <tr>
-            <td>4</td><td>name4</td><td>pass</td>
-        </tr>
-        <tr>
-            <td>5</td><td>name5</td><td>pass</td>
-        </tr>
-        <tr>
-            <td>6</td><td>name7</td><td>fail</td>
-        </tr>
-        <tr>
-            <td>7</td><td>name9</td><td>fail</td>
-        </tr>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="SrNo"> Sr No </th>
+            <th scope="col"> Name </th>
+            <th scope="col"> Technologies </th>
+            <th scope="col"> feedback </th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
     </table>
+
+    <script>
+        function saveToTable() {
+            var tBody = document.getElementById("tbody");
+            var rows = tBody.getElementsByTagName('tr');
+            
+            var technologies = document.createElement("td");
+            technologies.innerText = "Java, \nHibernate,\n JSP, Servelets";
+            var name = document.getElementById("name");
+            var feedback = document.getElementById("feedback");
+            var slNo = document.createElement("td");
+
+            slNo.textContent = 1;
+            var row = document.createElement("tr")
+            var colName = document.createElement("td")
+            colName.innerText = name.value;
+            var colfeedback = document.createElement("td")
+            colfeedback.innerText = feedback.value;
+            row.append(slNo);
+            row.append(colName);
+            // row.append(colName);
+            
+            if (rows.length >= 1) {
+                var selectedRow = rows[0];
+                var selectedCol = selectedRow.getElementsByTagName('td')[2];
+                selectedCol.setAttribute("rowSpan",(rows.length + 1))
+                //selectedRow.rowSpan=rows.length;
+                //alert("these are morethan one ");
+                //row.append(technologies);   
+            }
+            else{
+                row.append(technologies);          
+            }
+            row.append(colfeedback);   
+            tBody.append(row)
+        }
+    </script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"
+  ></script>
 </body>
 </html>
