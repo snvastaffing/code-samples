@@ -194,8 +194,12 @@
             <h1>User Profile</h1>
           </div>
         </div>
-        <div class="row align-items-center align-items-center">
-          
+
+
+        
+        <div id="followersAccounts" class="row align-items-center align-items-center invisible ">
+          <div class="accordion accordion-flush bg-light text-dark" id="accordionFlushExample">                    
+          </div>
         </div>
       </div>
     </section>
@@ -718,9 +722,68 @@
           .then(response =>response.json())
           .then(responseJson=>{
             let dataArr = responseJson;
-              dataArr.forEach(element => {
-                alert(JSON.stringify(element))
+            let accordianItems='';
+            $('#followersAccounts').removeClass('invisible');
+            dataArr.forEach(follower => {
+              let accordianNameId=follower.login
+              let html =`
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"                 
+                data-bs-target="#${accordianNameId}" 
+                aria-expanded="false" 
+                aria-controls="${accordianNameId}">
+                  ${follower.login}
+                </button>
+              </h2>
+              <div 
+              id="${accordianNameId}" 
+              class="accordion-collapse collapse" 
+              aria-labelledby="flush-headingOne"              
+              data-bs-parent="#accordionFlushExample" >
+                <div class="accordion-body">
+                  
+                      
+    <div class="row d-flex justify-content-center">
+        
+        <div class="col-md-7">
+            
+            <div class="card p-3 py-4">
+                
+                <div class="text-center">
+                    <img src="${follower.avatar_url}" width="100" class="rounded-circle">
+                </div>
+                
+                <div class="text-center mt-3">
+                    <span class="bg-secondary p-1 px-4 rounded text-white">Pro</span>
+                    <h5 class="mt-2 mb-0">${follower.login}</h5>                  
+                    <div class="buttons">
+                        <a target='' href="${follower.html_url}" class="btn btn-outline-primary px-4">View Github Profile </a>
+                        <a target='' href="${follower.organizations_url}" class="btn btn-primary px-4 ms-3">Organization </a>
+                    </div>
+                    
+                    
+                </div>
+                
+               
+                
+                
+            </div>
+            
+        </div>
+        
+    </div>
+                  
+                  </div>
+              </div>
+            </div>
+            `;           
+                accordianItems+=html;
             });
+
+            $('#accordionFlushExample').html(accordianItems);
+       
+                          
 
           });
     })});
@@ -783,4 +846,9 @@
 
 
   </body>
+
+
+
+
+  
 </html>
